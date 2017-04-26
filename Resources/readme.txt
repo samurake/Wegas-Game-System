@@ -1,0 +1,1 @@
+Aici punem resursele si ce mai gasim care poate fii folosit.
