@@ -1,0 +1,1 @@
+Folositi xamp cu serverul apache pornit si mysql deschis ca sa puteti rula treaba asta.

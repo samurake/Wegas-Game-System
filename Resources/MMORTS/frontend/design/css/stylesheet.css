@@ -1,0 +1,60 @@
+.wrapper{
+	width:1100px;
+	margin: 0 auto;
+}
+.layer{
+	margin-top:15px;
+	margin-bottom:15px;
+}
+.header{
+	background-color:#CCC;
+	padding:10px;
+	overflow:hidden;
+}
+.logo{
+	float:left;
+}
+.title{
+	float:left;
+	margin-left:15px;
+}
+.account-actions{
+	float:right;
+	margin-top:40px;
+	margin-right:25px;
+}
+.content{
+	background-color:#CCC;
+	padding:10px;
+}
+.footer{
+	background-color:#CCC;
+	text-align:center;
+	padding:10px;
+}
+.village-wrapper{
+	
+}
+.village{
+	width:560px;
+	height:450px;
+	margin-left:10px;
+	margin-right:10px;
+	float:left;
+	background-image:url("../../images/village-background.png");
+}
+.keep{
+	margin-top:202px;
+	margin-left:223px;
+}
+.resources{
+	width:250px;
+	height:450px;
+	float:left;
+}
+.armies{
+	width:250px;
+	height:450px;
+	float:left;
+}
+
