@@ -1,9 +1,9 @@
 <?php
 //Oracle DB user name
-$username = 'STUDENT';
+$username = 'wegasgame';
 
 // Oracle DB user password
-$password = 'STUDENT';
+$password = 'wegasgame';
 
 // Oracle DB connection string
 $connection_string = 'localhost/xe';
@@ -16,9 +16,9 @@ $connection_string
 );
 
 If (!$connection)
-echo 'The keks were not in your favour -- connection failed';
+echo 'Connection failed';
 else
-echo 'Praised be Kek! -- connection succesfull';
+echo 'Connection succesfull';
 
 // Close connection
 //oci_close($connection);
