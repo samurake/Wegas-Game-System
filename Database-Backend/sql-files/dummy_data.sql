@@ -1,22 +1,3 @@
-CREATE OR REPLACE PROCEDURE implanted_city (usr_id IN INTEGER) IS
-	numb_city NUMBER(1,0);
-	city_max_id NUMBER(10,0);
-BEGIN
-	numb_city := dbms_random.value(1,3);
-	BEGIN
-		select cityID into city_max_id from CITY where cityID =(select max(cityID) from CITY);
-		EXCEPTION
-			WHEN no_data_found
-			THEN
-			city_max_id := 0;
-	END;
-	FOR i IN 1..numb_city LOOP
-		city_max_id := city_max_id + 1;
-		INSERT INTO CITY(users_id, cityID, cityPosX, cityPosY, cityPoints, StorageWood, StorageStone, StorageFood, StorageMaxCapacity)
-		VALUES(usr_id, city_max_id, dbms_random.value(0, 1000), dbms_random.value(0, 1000), dbms_random.value(0, 3000), dbms_random.value(0, 1000), dbms_random.value(0, 1000), dbms_random.value(0, 1000), dbms_random.value(1000, 50000));
-	END LOOP;
-END;
-
 CREATE OR REPLACE PROCEDURE implanted_users (numb_users IN INTEGER) IS
 	nm_usr varchar2(25);
 	add_usr NUMBER(9,0);
@@ -74,7 +55,6 @@ BEGIN
 		pass_usr := dbms_random.string('A', 18);
 		BEGIN
 		INSERT INTO PLAYERS(userid, username, email, passwd) VALUES(usr_procedure_id, nm_usr, email_usr, pass_usr);
-		implanted_city(usr_procedure_id);
 		EXCEPTION
 			WHEN OTHERS
 			THEN
