@@ -1,10 +1,3 @@
-alter table user_buildings add entity_id NUMBER(10);
-
-alter table user_buildings add building_level NUMBER(10);
-
-ALTER TABLE BUILDINGLEVELS ADD pointsvalue NUMBER(10);
-
-
 INSERT INTO buildings(BUILDING_id,BUILDING_NAME,BUILDING_LEVEL,costinwood,COSTINFOOD,COSTINSTONE,BFUNCTION)
     VALUES(1,'Castle',1,dbms_random.value(10000,1532145),dbms_random.value(10000,1532145),dbms_random.value(10000,1532145),1);
 
