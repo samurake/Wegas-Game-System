@@ -1,5 +1,5 @@
 SET SERVEROUTPUT ON;
-CREATE OR REPLACE DIRECTORY EXPORT_DIR AS 'C:\Users\';
+CREATE OR REPLACE DIRECTORY EXPORT_DIR AS 'X:\PROJECT';
 GRANT READ ON DIRECTORY EXPORT_DIR TO PUBLIC;
 
 CREATE OR REPLACE PROCEDURE RECREATE_TABLES(tblName IN VARCHAR2, 
@@ -82,10 +82,10 @@ BEGIN
 
 -- Exporting database
 FOR position IN
-  (SELECT * FROM ALL_OBJECTS WHERE OWNER = 'STUDENT') LOOP
+  (SELECT * FROM ALL_OBJECTS WHERE OWNER = 'PROIECT') LOOP
     BEGIN
     
-      UTL_FILE.PUT_LINE(expData,dbms_metadata.get_ddl('TABLE',position.OBJECT_NAME,'STUDENT'));
+      UTL_FILE.PUT_LINE(expData,dbms_metadata.get_ddl('TABLE',position.OBJECT_NAME,'PROIECT'));
       IF position.OBJECT_TYPE = 'TABLE' THEN
         RECREATE_TABLES(position.OBJECT_NAME, expData);
       END IF;
@@ -94,11 +94,11 @@ FOR position IN
   END LOOP;
 
   FOR position IN
-  (SELECT * FROM ALL_OBJECTS WHERE OWNER = 'STUDENT') LOOP
+  (SELECT * FROM ALL_OBJECTS WHERE OWNER = 'PROIECT') LOOP
     BEGIN
      IF position.OBJECT_TYPE != 'LOB' AND  position.OBJECT_TYPE != 'TABLE'  AND  position.OBJECT_TYPE != 'INDEX' THEN
         IF position.OBJECT_NAME != 'RECREATE_TABLES' THEN
-            UTL_FILE.PUT_LINE(expData,dbms_metadata.get_ddl(position.OBJECT_TYPE,position.OBJECT_NAME,'STUDENT'));
+            UTL_FILE.PUT_LINE(expData,dbms_metadata.get_ddl(position.OBJECT_TYPE,position.OBJECT_NAME,'PROIECT'));
         END IF;    
     END IF;  
         EXCEPTION WHEN OTHERS THEN NULL;
