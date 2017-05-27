@@ -50,6 +50,9 @@ begin
   select users_id into v_user_id from city where users_id = :oldRow.userid;
   execute immediate 'delete from user_buildings where users_id = '||v_user_id;
   execute immediate 'delete from city where users_id = '||v_user_id;
+	EXCEPTION
+		when NO_DATA_FOUND then
+	null;
 end;
 
 
@@ -62,4 +65,7 @@ declare
 begin
   select cityid into v_city_id from user_buildings where cityid = :oldRow.cityid;
   execute immediate 'delete from user_buildings where cityid = '||v_city_id;
+	EXCEPTION
+		when NO_DATA_FOUND then
+	null;
 end;
