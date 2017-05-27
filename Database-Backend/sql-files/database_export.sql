@@ -97,12 +97,8 @@ FOR position IN
   (SELECT * FROM ALL_OBJECTS WHERE OWNER = 'STUDENT') LOOP
     BEGIN
      IF position.OBJECT_TYPE != 'LOB' AND  position.OBJECT_TYPE != 'TABLE'  AND  position.OBJECT_TYPE != 'INDEX' THEN
-         IF position.OBJECT_NAME = 'RELEVANTAINTREBARE' THEN
-            UTL_FILE.PUT_LINE(expData,dbms_metadata.get_ddl('FUNCTION','STUDENTPUTUROS','STUDENT'));
-            UTL_FILE.PUT_LINE(expData,dbms_metadata.get_ddl('FUNCTION','RELEVANTAINTREBARE','STUDENT'));
-        ELSE IF position.OBJECT_NAME != 'RECREATE_TABLES' THEN
+        IF position.OBJECT_NAME != 'RECREATE_TABLES' THEN
             UTL_FILE.PUT_LINE(expData,dbms_metadata.get_ddl(position.OBJECT_TYPE,position.OBJECT_NAME,'STUDENT'));
-            END IF;
         END IF;    
     END IF;  
         EXCEPTION WHEN OTHERS THEN NULL;
