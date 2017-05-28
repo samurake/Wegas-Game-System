@@ -39,7 +39,7 @@ begin
 	values(:newRow.userid, 3, city_max_id, 300, build_entity_id,1);
 end;
 
-
+/
 create or replace trigger deleteUserTrigger
 after delete on players
 referencing old as oldRow
@@ -55,7 +55,7 @@ begin
 	null;
 end;
 
-
+/
 create or replace trigger deleteCityTrigger
 after delete on city
 referencing old as oldRow
