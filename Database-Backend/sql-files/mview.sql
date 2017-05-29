@@ -1,0 +1,8 @@
+set serveroutput on;
+
+CREATE MATERIALIZED VIEW materialized_view
+BUILD IMMEDIATE
+REFRESH FORCE ON DEMAND
+  AS
+    SELECT 'User: ' || P.USERNAME || ' CityID: ' || C.CITYID
+    FROM PLAYERS P JOIN CITY C ON P.USERID = C.USERS_ID;
