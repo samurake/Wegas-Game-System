@@ -6,4 +6,3 @@ AS
   update_null_to_notnull EXCEPTION;
   PRAGMA EXCEPTION_INIT(update_null_to_notnull, -1407);
 END exceptionhandler;
-

@@ -7,6 +7,7 @@ CREATE TABLE PLAYERS
 	username VARCHAR2(30) not null unique,
 	email VARCHAR2(50) not null,
 	passwd VARCHAR2(20) not null,
+	totalPoints number(10),
 	CONSTRAINT pk_user PRIMARY KEY(userid)
 );
 

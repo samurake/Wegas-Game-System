@@ -5,6 +5,7 @@ CREATE OR REPLACE PACKAGE buildingshandler
       procedure calculateBuildingPointsRU(p_entity_id number);
       procedure deleteBuildingD(p_entity_id number);
       function getUsersPoints(ID_user NUMBER) RETURN NUMBER;
+      function getBuildingPoints(p_level number, p_building_id number) return number;
 
   end buildingshandler;
 
@@ -83,4 +84,13 @@ CREATE OR REPLACE PACKAGE body buildingshandler
           WHEN NO_DATA_FOUND THEN
               null;
       end newBuildingC;
+
+      function getBuildingPoints(p_level number, p_building_id number)
+      return number AS
+        v_return number(10) := 0;
+      BEGIN
+        Select pointsvalue into v_return from buildinglevels where building_id = p_building_id and levelid = p_level and rownum = 1;
+        return v_return;
+      end getBuildingPoints;
+
   END buildingshandler;
