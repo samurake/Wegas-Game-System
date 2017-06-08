@@ -236,12 +236,21 @@ MedievalCity.Ui = {
         if (MedievalCity.selectedObject.id == null) {
             return;
         }
+
         var building = MedievalCity.availableBuildings[buildingIndex].object();
 
-        if (building.stats.costs > MedievalCity.stats.grain) {
-//            $('#build-info').innerHTML = 'Not enough money.';
+        if ( (building.stats.grain > grainTotal) || (building.stats.stone > grainTotal) || (building.stats.lumber > grainTotal) ){
             return;
         }
+
+        if(building.name == 'Main Building') {
+            mainBuildingExist = true;
+        }
+
+        if(mainBuildingExist == false){
+            return;
+        }
+
 
         if (building.collisionable == true) {
             var testGrid = [];
