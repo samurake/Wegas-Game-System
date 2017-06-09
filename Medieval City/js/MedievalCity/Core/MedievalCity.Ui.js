@@ -51,31 +51,10 @@ MedievalCity.Ui = {
         MedievalCity.controls.maxPolarAngle = 1.5; // radians
     },
 
-    menu: function() {
-
-        // show menu
-        for (var i = 0; i < $('.status-menu').length; i++) {
-            $('.status-menu')[i].style.display = 'block';
-        }
-        // hide in-game
-        for (var i = 0; i < $('.status-in-game').length; i++) {
-            $('.status-in-game')[i].style.display = 'none';
-        }
-        // hide game menu
-        for (var i = 0; i < $('.status-menu-game').length; i++) {
-            $('.status-menu-game')[i].style.display = 'none';
-        }
-
-        MedievalCity.reset();
-
-    },
 
     gameMenu: function () {
 
-        // hide menu
-        for (var i = 0; i < $('.status-menu').length; i++) {
-            $('.status-menu')[i].style.display = 'none';
-        }
+
         // hide in-game
         for (var i = 0; i < $('.status-in-game').length; i++) {
             $('.status-in-game')[i].style.display = 'none';
@@ -94,10 +73,6 @@ MedievalCity.Ui = {
 
         MedievalCity.reset();
 
-        // hide menu
-        for (var i = 0; i < $('.status-menu').length; i++) {
-            $('.status-menu')[i].style.display = 'none';
-        }
         // show in-game
         for (var i = 0; i < $('.status-in-game').length; i++) {
             $('.status-in-game')[i].style.display = 'block';

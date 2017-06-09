@@ -4,9 +4,9 @@ MedievalCity.Building = function () {
     this.name = ''; // Name of the Building
     this.description = ''; // Description of the Building. May contain HTML
     this.stats = {
-        costs: 1,
-        speed: 1000, // Interval in ms. @todo Might wanna do this in fps 'time'
-        range: 20
+        grain: 1,
+        stone: 1,
+        lumber: 1
     }
     this.icon = 'default.png'; // Building icon
 
@@ -49,7 +49,6 @@ MedievalCity.Building.prototype.spawn = function(tileObject) {
     }
     MedievalCity.Building.buildingPosX = tileObject.gridPosition.x;
     MedievalCity.Building.buildingPosY = tileObject.gridPosition.y;
-    this.buildingPosY = tileObject.gridPosition.y;
     tileObject.object.add(this.object);
     tileObject.currentBuilding = this;
     return true;
