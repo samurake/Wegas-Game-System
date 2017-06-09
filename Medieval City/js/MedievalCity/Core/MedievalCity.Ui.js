@@ -229,7 +229,7 @@ MedievalCity.Ui = {
 
         if ( (building.stats.grain > grainTotal) || (building.stats.stone > grainTotal) || (building.stats.lumber > grainTotal) ){
             this.hideBuildMenu();
-            this.toggle_visibility('popupBoxOnePosition');
+            this.toggle_visibility('popupBoxOther');
             return;
         }
 
@@ -239,7 +239,7 @@ MedievalCity.Ui = {
 
         if(mainBuildingExist == false){
             this.hideBuildMenu();
-            this.toggle_visibility('popupBoxOnePosition');
+            this.toggle_visibility('popupBoxMainBuilding');
             return;
         }
 
