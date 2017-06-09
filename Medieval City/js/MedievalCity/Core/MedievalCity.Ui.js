@@ -41,6 +41,8 @@ MedievalCity.Ui = {
     },
 
     initializeControls: function(camera) {
+        var audio = new Audio('Medieval Music - Sir Tristan.mp3');
+        audio.play();
 
         MedievalCity.controls = new THREE.OrbitControls( camera );
         MedievalCity.controls.damping = 0.2;
