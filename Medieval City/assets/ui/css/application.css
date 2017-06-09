@@ -270,6 +270,7 @@ li.c {
 /* The actual popup */
 .popup .popuptext {
     visibility: hidden;
+	white-space: pre-wrap;
     width: 270px;
     background-color: #555;
     color: #fff;
