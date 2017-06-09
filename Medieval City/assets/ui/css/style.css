@@ -1,0 +1,112 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url(https://fonts.googleapis.com/css?family=Aldrich:10);
+@import url(https://fonts.googleapis.com/css?family=Frijole:10);
+
+@media all and (max-width: 639px) and (min-width: 320px) {
+    #fourohfour_home {
+        background-size: 320px 240px;
+    }
+}
+
+@media all and (max-width: 799px) and (min-width: 640px) {
+    #fourohfour_home {
+        background-size: 640px 480px;
+    }
+}
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: url(texture.jpg);
+  background-size: 500px 400px;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 25px;
+}
+.form input {
+  font-family: "Aldrich", sans-serif;
+  outline: 0;
+  background: #C0C0C0;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  border-radius: 15px;
+}
+.form button {
+  font-family: "Aldrich", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: url(paper.jpg);
+  background-size: 300px 200px;
+  width: 50%;
+  border: 0;
+  padding: 10px;
+  color: #FFFFFF;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-radius: 15px;
+}
+.button{
+  font-family: "Aldrich", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: url(paper.jpg);
+  background-size: 300px 200px;
+  width: 50%;
+  border: 0;
+  padding: 10px;
+  color: #FFFFFF;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-radius: 15px;
+}
+.form button:hover,.form button:active,.form button:focus {
+  width: 80%;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: black;
+  font-size: 12px;
+  font-family: "Frijole", sans-serif;
+}
+.form .message a {
+  color: black;
+  text-decoration: none;
+}
+.form .message a:hover{
+  color: #FF0000;
+}
+.form .register-form {
+  display: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+body {
+  background: url(house.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Roboto", sans-serif;
+}
