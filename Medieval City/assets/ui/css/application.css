@@ -43,9 +43,8 @@ a:hover {
 .game-ui {
     z-index: 1;
 }
-.status-menu {
-    background-image: url(../background.jpg);
-    background-size: cover;
+.level {
+    text-align: center;
 }
 .loading-container {
     display: none;
@@ -92,6 +91,7 @@ a:hover {
     background-color: #eee;
     box-shadow: 0 0 1px #000;
     color: #000;
+    border-radius: 15px;
 }
 .overlay {
     position: absolute;
@@ -210,12 +210,11 @@ a:hover {
 
 
 .tooltipgame {
-    border-bottom: 1px dotted red;
 }
 
 .tooltipgame .tooltiptext {
     visibility: hidden;
-    width: 120px;
+    width: 80px;
     background-color: #555;
     color: #fff;
     text-align: center;
@@ -226,8 +225,9 @@ a:hover {
     bottom: 125%;
     left: 50%;
     margin-left: -60px;
-    opacity: 0;
-    transition: opacity 1s;
+    transition: opacity 3s;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
 }
 
 .tooltipgame .tooltiptext::after {
