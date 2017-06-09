@@ -301,3 +301,30 @@ li.c {
     from {opacity: 0;}
     to {opacity:1 ;}
 }
+
+/*enough resources notification*/
+
+.popupBoxStyle{
+    top: 0; left: 0; position: fixed; width: 100%; height: 120%;
+    background-color: rgba(85,85,85,0.4); display: none;
+}
+
+.popupBoxWrapper{
+    width: 550px;
+    margin: 50px auto;
+    text-align: left;
+    opacity: 0.9;
+    border: 5px solid #fff;
+    border-right-color: #b9b9b9;
+    border-bottom-color: #8f8f8f;
+    background-color: #eee;
+    box-shadow: 0 0 1px #000;
+    color: #000;
+    border-radius: 15px;
+}
+
+.popupBoxContent{
+    text-align: center;
+    background-color: #C0C0C0;
+    padding: 15px;
+}

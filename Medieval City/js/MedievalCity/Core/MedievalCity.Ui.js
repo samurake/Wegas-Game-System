@@ -5,6 +5,16 @@ MedievalCity.Ui = {
 
     level: {},
 	
+	/*popup functions for resources*/
+
+    toggle_visibility: function(id) {
+        var e = document.getElementById(id);
+        if(e.style.display == 'block')
+            e.style.display = 'none';
+        else
+            e.style.display = 'block';
+    },
+	
 	mypopup:function() {
         var popup = document.getElementById("myPopup");
         popup.classList.toggle("show");
@@ -218,6 +228,8 @@ MedievalCity.Ui = {
         var building = MedievalCity.availableBuildings[buildingIndex].object();
 
         if ( (building.stats.grain > grainTotal) || (building.stats.stone > grainTotal) || (building.stats.lumber > grainTotal) ){
+            this.hideBuildMenu();
+            this.toggle_visibility('popupBoxOnePosition');
             return;
         }
 
@@ -226,6 +238,8 @@ MedievalCity.Ui = {
         }
 
         if(mainBuildingExist == false){
+            this.hideBuildMenu();
+            this.toggle_visibility('popupBoxOnePosition');
             return;
         }
 

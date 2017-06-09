@@ -5,7 +5,7 @@ var gameRender;
  * @type {THREE.Vector3}
  */
 var lookpoint = new THREE.Vector3(0,10,0);
-
+var mainBuildingExist = false;
 /**
  * Resource multipliers and vars.
  */
