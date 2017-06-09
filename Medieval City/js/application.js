@@ -13,9 +13,11 @@ var woodResources  = 0;
 var stoneResources = 0;
 var grainResources = 0;
 
-var woodTotal = 0;
-var stoneTotal = 0;
-var grainTotal = 0;
+var woodTotal = 600;
+var stoneTotal = 600;
+var grainTotal = 600;
+
+var mainBuildingRes = 0;
 
 /**
  * Three.js render starting function!
