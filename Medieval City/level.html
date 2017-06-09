@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Medieval City</title>
+        <link rel="stylesheet" href="assets/ui/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="assets/ui/css/application.css" />
+        <script src="js/lib/dom.js"></script>
+        <script src="js/lib/webgl.tools.js"></script>
+        <script src="js/lib/three.min.js"></script>
+        <script src="js/lib/OBJLoader.js"></script>
+        <script src="js/lib/OrbitControls.js"></script>
+        <script src="js/MedievalCity/MedievalCity.js"></script>
+        <script src="js/MedievalCity/Core/MedievalCity.Element.js"></script>
+        <script src="js/MedievalCity/Core/MedievalCity.Ui.js"></script>
+        <script src="js/MedievalCity/Levels/MedievalCity.Level.js"></script>
+        <script src="js/MedievalCity/Levels/MedievalCity.Level1.js"></script>
+        <script src="js/MedievalCity/Buildings/MedievalCity.Building.js"></script>
+        <script src="js/MedievalCity/Buildings/MedievalCity.MainBuilding.js"></script>
+        <script src="js/MedievalCity/Buildings/MedievalCity.LumberJackBuilding.js"></script>
+        <script src="js/MedievalCity/Buildings/MedievalCity.StoneBuilding.js"></script>
+        <script src="js/MedievalCity/Buildings/MedievalCity.WindMill.js"></script>
+        <script src="js/MedievalCity/Tile/MedievalCity.Tile.js"></script>
+        <script src="js/MedievalCity/Tile/MedievalCity.BasicTile.js"></script>
+        <script src="js/MedievalCity/Tile/MedievalCity.DecoTile.js"></script>
+        <script src="js/MedievalCity/Tile/MedievalCity.WoodTile.js"></script>
+        <script src="js/MedievalCity/Tile/MedievalCity.StoneTile.js"></script>
+        <script src="js/MedievalCity/Tile/MedievalCity.GrainTile.js"></script>
+    </head>
+    <body>
+
+       <div class="level status-menu-game">
+           <p>Welcome, brave man !</p>
+           <br>
+           <a onclick="MedievalCity.Ui.playLevel();" class="btn btn-primary">Start game</a>
+           <br>
+           <br>
+           <p>easter eggs:</p>
+           <p>if you collect 666 resources of every type, you'll see for a moment the masonic eye...</p>
+       </div>
+
+        <div id="demo" class="container-fluid status-in-game" style="display: none;">
+            <div class="top-buffer navbar-fixed-top text-center">
+                        <a onclick="MedievalCity.Ui.gameMenu();" class="btn btn-default">Exit</a>
+            </div>
+            <div id="game"></div>
+				<div class="popup" onclick="MedievalCity.Ui.mypopup();" align="right">TIPS
+				<span class="popuptext" id="myPopup">To gather resources you must place the buildings next to the resource they can gather. </span>
+            </div>
+            <div class="row top-buffer game-ui">
+                <div class="col-sm-push-9 col-md-push-10 col-lg-push-11 col-sm-3 col-md-2 col-lg-1">
+                    <div class="game-stat" title="Grain"><img src="assets/ui/grain.png" /> <span id="game-grain" class="pull-right">0</span></div>
+                    <div class="game-stat" title="Stone"><img src="assets/ui/stone.png" /> <span id="game-stone" class="pull-right">0</span></div>
+                    <div class="game-stat" title="Lumber"><img src="assets/ui/lumber.png" /> <span id="game-lumber" class="pull-right">0</span></div>
+                </div>
+            </div>
+            <div class="bottom-buffer text-center navbar-fixed-bottom game-ui" id="build-menu"></div>
+        </div>
+
+        <div class="loading-container" id="loading-container"><div id="loading"></div></div>
+        <script src="js/application.js"></script>
+    </body>
+</html>
