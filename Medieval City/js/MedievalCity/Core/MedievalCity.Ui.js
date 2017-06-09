@@ -46,11 +46,12 @@ MedievalCity.Ui = {
 
         MedievalCity.controls = new THREE.OrbitControls( camera );
         MedievalCity.controls.damping = 0.2;
-        MedievalCity.controls.minDistance = 110;
-        MedievalCity.controls.maxDistance = 250;
+        MedievalCity.controls.minDistance = 60;
+        MedievalCity.controls.maxDistance = 220;
         MedievalCity.controls.noPan = false;
         MedievalCity.controls.minPolarAngle = 0; // radians
         MedievalCity.controls.maxPolarAngle = 1.5; // radians
+
     },
 
 

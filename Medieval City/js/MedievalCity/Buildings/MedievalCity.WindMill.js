@@ -24,7 +24,7 @@ MedievalCity.WindMill.prototype.create = function () {
 
     this.object.rotation.x = Math.PI / 2;
     this.object.scale.x = 0.05;
-    this.object.scale.y = 0.05;
+    this.object.scale.y = 0.07;
     this.object.scale.z = 0.05;
 
     return this.object;

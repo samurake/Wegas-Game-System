@@ -159,7 +159,7 @@ MedievalCity.Level.prototype.createScene = function () {
     MedievalCity.scene = new THREE.Scene();
     MedievalCity.camera = new THREE.PerspectiveCamera( 70, MedievalCity.gameWidth / MedievalCity.gameHeight, 1, 10000 );
     MedievalCity.camera.position.x = 60;
-    MedievalCity.camera.position.y = -210;
+    MedievalCity.camera.position.y = -170;
     MedievalCity.camera.position.z = 120;
     MedievalCity.camera.up = new THREE.Vector3(0,0,1);
     MedievalCity.camera.lookAt(lookpoint);
@@ -233,4 +233,20 @@ MedievalCity.Level.prototype.createDecoration = function() {
     hemiLight.shadowBias = -0.001;
     MedievalCity.scene.add( hemiLight );
 
+    var imagePrefix = "assets/skybox/";
+    var directions  = ["posx", "negx", "posy", "negy", "posz", "negz"];
+    var imageSuffix = ".png";
+
+    var materialArray = [];
+    for (var i = 0; i < 6; i++)
+        materialArray.push( new THREE.MeshBasicMaterial({
+            map: THREE.ImageUtils.loadTexture( imagePrefix + directions[i] + imageSuffix ),
+            side: THREE.BackSide
+        }));
+
+    var skyGeometry = new THREE.CubeGeometry( 8500, 8500, 8500 );
+    var skyMaterial = new THREE.MeshFaceMaterial( materialArray );
+    var skyBox = new THREE.Mesh( skyGeometry, skyMaterial );
+    skyBox.rotation.x += Math.PI / 2;
+    MedievalCity.scene.add( skyBox );
 }

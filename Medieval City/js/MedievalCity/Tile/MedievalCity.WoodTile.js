@@ -13,7 +13,7 @@ MedievalCity.WoodTile.prototype.create = function () {
     MedievalCity.Tile.prototype.create.call(this);
 
     this.object.scale.x = 0.07;
-    this.object.scale.y = 0.04;
+    this.object.scale.y = 0.045;
     this.object.scale.z = 0.04;
     return this.object;
 }
