@@ -4,12 +4,12 @@ Logic Interaction with the game will be placed here.
 MedievalCity.Ui = {
 
     level: {},
-	
+
 	resetbackground: function() {
     document.getElementById('theBody').style.backgroundImage='none';
     document.getElementById('theBody').style.backgroundColor='#000';
     },
-	
+
 	/*popup functions for resources*/
 
     toggle_visibility: function(id) {
@@ -19,7 +19,7 @@ MedievalCity.Ui = {
         else
             e.style.display = 'block';
     },
-	
+
 	mypopup:function() {
         var popup = document.getElementById("myPopup");
         popup.classList.toggle("show");
@@ -188,16 +188,16 @@ MedievalCity.Ui = {
                 var currencyDiv = '<div class="overlay overlay-black bottom text-center grain'+ extraClass+ '">'+ '</div>';
                 switch(object.name) {
                     case 'Main Building':
-                        var link = '<a class="game-stat tooltipgame'+ extraClass +'" onclick="MedievalCity.Ui.buildBuilding('+ index +');">'+ currencyDiv + image +'<span class="tooltiptext"><ul><li class="a">500</li> <li class="b">500</li>  <li class="c">500</li></ul></span>'+ '</a>';
+                        var link = '<a class="game-stat tooltipgame'+ extraClass +'" onclick="MedievalCity.Ui.buildBuilding('+ index +');">'+ currencyDiv + image +'<span class="tooltiptext">Main Building<ul><li class="a">500</li> <li class="b">500</li>  <li class="c">500</li></ul></span>'+ '</a>';
                         break;
                     case 'Lumberjack Building':
-                        var link = '<a class="game-stat tooltipgame'+ extraClass +'" onclick="MedievalCity.Ui.buildBuilding('+ index +');">'+ currencyDiv + image +'<span class="tooltiptext"><ul><li class="a">50</li> <li class="b">40</li> <li class="c">85</li></ul></span>'+ '</a>';
+                        var link = '<a class="game-stat tooltipgame'+ extraClass +'" onclick="MedievalCity.Ui.buildBuilding('+ index +');">'+ currencyDiv + image +'<span class="tooltiptext">Lumberjack Building<ul><li class="a">50</li> <li class="b">40</li> <li class="c">85</li></ul></span>'+ '</a>';
                         break;
                     case 'Stone Building':
-                        var link = '<a class="game-stat tooltipgame'+ extraClass +'" onclick="MedievalCity.Ui.buildBuilding('+ index +');">'+ currencyDiv + image +'<span class="tooltiptext"><ul><li class="a">50</li> <li class="b">60</li> <li class="c">75</li></ul></span>'+ '</a>';
+                        var link = '<a class="game-stat tooltipgame'+ extraClass +'" onclick="MedievalCity.Ui.buildBuilding('+ index +');">'+ currencyDiv + image +'<span class="tooltiptext">Stone Building<ul><li class="a">50</li> <li class="b">60</li> <li class="c">75</li></ul></span>'+ '</a>';
                         break;
                     case 'WindMill':
-                        var link = '<a class="game-stat tooltipgame'+ extraClass +'" onclick="MedievalCity.Ui.buildBuilding('+ index +');">'+ currencyDiv + image +'<span class="tooltiptext"><ul><li class="a">30</li> <li class="b">20</li> <li class="c">150</li></ul></span>'+ '</a>';
+                        var link = '<a class="game-stat tooltipgame'+ extraClass +'" onclick="MedievalCity.Ui.buildBuilding('+ index +');">'+ currencyDiv + image +'<span class="tooltiptext">Windmill<ul><li class="a">30</li> <li class="b">20</li> <li class="c">150</li></ul></span>'+ '</a>';
                         break;
                     default:
                         var link = '<a class="game-stat tooltipgame'+ extraClass +'" onclick="MedievalCity.Ui.buildBuilding('+ index +');">'+ currencyDiv + image +'<span class="tooltiptext">Unknown</span>'+ '</a>';
