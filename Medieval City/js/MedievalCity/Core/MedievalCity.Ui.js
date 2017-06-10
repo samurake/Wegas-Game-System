@@ -5,6 +5,11 @@ MedievalCity.Ui = {
 
     level: {},
 	
+	resetbackground: function() {
+    document.getElementById('theBody').style.backgroundImage='none';
+    document.getElementById('theBody').style.backgroundColor='#000';
+    },
+	
 	/*popup functions for resources*/
 
     toggle_visibility: function(id) {

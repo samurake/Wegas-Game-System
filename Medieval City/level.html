@@ -27,12 +27,12 @@
         <script src="js/MedievalCity/Tile/MedievalCity.StoneTile.js"></script>
         <script src="js/MedievalCity/Tile/MedievalCity.GrainTile.js"></script>
     </head>
-    <body>
+    <body id="theBody">
 
        <div class="level status-menu-game">
            <p>Welcome, brave man !</p>
            <br>
-           <a onclick="MedievalCity.Ui.playLevel();" class="btn btn-primary">Start game</a>
+           <a onclick="MedievalCity.Ui.playLevel();MedievalCity.Ui.resetbackground();" class="btn btn-primary">Start game</a>
            <br>
            <br>
            <p>easter eggs:</p>

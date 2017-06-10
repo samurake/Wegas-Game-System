@@ -1,3 +1,7 @@
+html{
+    background-color: transparent;
+}
+
 @font-face {
     font-family: 'distant_galaxyregular';
     src: url('../fonts/DISTGRG_-webfont.eot');
@@ -21,9 +25,9 @@ html, body, #game, .status-menu {
 body {
     font-family: distant_galaxyregular, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 22px;
-    background: #000;
     color: #fff;
-    overflow: hidden;
+    background-color: transparent;
+    background-image: url(house.jpg);
 }
 a, .btn, a * {
     cursor:  url(../cursor-active.png) 5 1, auto;
