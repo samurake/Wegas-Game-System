@@ -189,7 +189,7 @@ MedievalCity.Ui = {
                         var link = '<a class="game-stat tooltipgame'+ extraClass +'" onclick="MedievalCity.Ui.buildBuilding('+ index +');">'+ currencyDiv + image +'<span class="tooltiptext"><ul><li class="a">50</li> <li class="b">40</li> <li class="c">85</li></ul></span>'+ '</a>';
                         break;
                     case 'Stone Building':
-                        var link = '<a class="game-stat tooltipgame'+ extraClass +'" onclick="MedievalCity.Ui.buildBuilding('+ index +');">'+ currencyDiv + image +'<span class="tooltiptext"><ul><li class="a">50</li> <li class="b">20</li> <li class="c">75</li></ul></span>'+ '</a>';
+                        var link = '<a class="game-stat tooltipgame'+ extraClass +'" onclick="MedievalCity.Ui.buildBuilding('+ index +');">'+ currencyDiv + image +'<span class="tooltiptext"><ul><li class="a">50</li> <li class="b">60</li> <li class="c">75</li></ul></span>'+ '</a>';
                         break;
                     case 'WindMill':
                         var link = '<a class="game-stat tooltipgame'+ extraClass +'" onclick="MedievalCity.Ui.buildBuilding('+ index +');">'+ currencyDiv + image +'<span class="tooltiptext"><ul><li class="a">30</li> <li class="b">20</li> <li class="c">150</li></ul></span>'+ '</a>';

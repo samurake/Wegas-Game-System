@@ -225,7 +225,7 @@ a:hover {
     bottom: 125%;
     left: 50%;
     margin-left: -60px;
-    transition: opacity 3s;
+    transition: opacity 1s;
     opacity: 0.4;
     filter: alpha(opacity=40);
 }

@@ -8,7 +8,7 @@ MedievalCity.StoneBuilding = function () {
     this.meshTexture = 'building-03';
     this.stats = {
         grain: 50,
-        stone: 20,
+        stone: 60,
         lumber: 75
     }
     this.icon = 'building-03.png';
