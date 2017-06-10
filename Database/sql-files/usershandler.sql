@@ -1,7 +1,6 @@
 CREATE or replace PACKAGE usershandler
 AS
     function isUserRegisteredR(p_numeuser varchar2) return boolean;
-    function isUserRegisteredR(p_numeuser varchar2, p_email varchar2) return boolean;
     function isUserValidR(p_numeuser varchar2, p_passwd varchar2) return boolean;
     function registerC(p_numeuser varchar2, p_email varchar2, p_passwd varchar2) return NUMBER;
     function loginR(p_numeuser varchar2, p_passwd varchar2) return NUMBER;
@@ -14,7 +13,7 @@ create or replace package body usershandler AS
   function isUserRegisteredR(p_numeuser varchar2) return boolean AS
     v_test_id int := 0;
     begin
-      select userid into v_test_id from players where username=p_numeuser;
+      select max(userid) into v_test_id from players where username=p_numeuser;
       if(v_test_id > 0)
       then return true;
         ELSE return false;
@@ -24,18 +23,6 @@ create or replace package body usershandler AS
       return false;
     end isUserRegisteredR;
 
-  function isUserRegisteredR(p_numeuser varchar2, p_email varchar2) return boolean AS
-    v_test_id int := 0;
-    begin
-      select userid into v_test_id from players where username=p_numeuser and email=p_email;
-      if(v_test_id > 0)
-      then return true;
-        ELSE return false;
-        end if;
-      EXCEPTION
-        WHEN no_data_found THEN
-      return false;
-    end isUserRegisteredR;
 
   function isUserValidR(p_numeuser varchar2, p_passwd varchar2) return boolean AS
     v_test_id int := 0;
@@ -58,7 +45,7 @@ create or replace package body usershandler AS
       v_check_user_null int := 0;
       v_check_city_null int := 0;
   begin
-      if isUserRegisteredR(p_numeuser,p_Email) = true then
+      if isUserRegisteredR(p_numeuser) = true then
         return 0;
       else
 
@@ -79,8 +66,7 @@ create or replace package body usershandler AS
           v_city_id := v_city_max_id + 1;
         END IF;
 
-        insert into players(userid, username, email, passwd) values(trim(v_user_id), trim(p_numeuser), trim(p_email), trim(p_passwd));
-        insert into city(users_id, cityid, cityposx, cityposy, citypoints, storagewood, storagestone, storagefood, storagemaxcapacity) values(v_user_id, v_city_id, dbms_random.value(0,1000), dbms_random.value(0,1000), 0, 50, 50, 50, 200);
+        insert into players(userid, username, email, passwd, totalpoints) values(trim(v_user_id), trim(p_numeuser), trim(p_email), trim(p_passwd), 0);
         return 1;
     end if;
       EXCEPTION
@@ -97,6 +83,7 @@ create or replace package body usershandler AS
       if isUserRegisteredR(trim(p_numeuser)) = true THEN
         if isUserValidR(trim(p_numeuser),trim(p_passwd)) = true THEN
           SELECT userid into v_returnID from players where username = trim(p_numeuser);
+          return v_returnID;
         ELSE
           v_returnID := -1;
           end if;
