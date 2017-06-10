@@ -25,8 +25,11 @@ function strip_special_characters($str)
 
       if($r > 0)
         header("Location: http://localhost:8101/Medieval%20City/level.html");
-      else
-        echo '<br>Login failed!';
+      else{
+        echo '<script type = "text/javascript" >alert("Invalid User.");
+              window.location.pathname = "Medieval%20City/index.html";
+              </script>';
+      }
 
       oci_free_statement($stid);
 

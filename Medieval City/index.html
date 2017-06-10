@@ -12,11 +12,11 @@
 <body>
   <div class="login-page">
   <div class="form">
-    <form class="register-form">
-      <input type="text" placeholder="name"/>
-      <input type="password" placeholder="password"/>
-      <input type="text" placeholder="email address"/>
-      <button>create</button>
+    <form class="register-form" action="oracle/register.php" method="POST">
+      <input type="text" name="r_username" placeholder="name"/>
+      <input type="password" name="r_password" placeholder="password"/>
+      <input type="text" name="r_email" placeholder="email address"/>
+      <button type="submit">create</button>
       <p class="message">Already registered? <a href="#">Sign In</a></p>
     </form>
     <form class="login-form" action="oracle/login.php" method="POST">

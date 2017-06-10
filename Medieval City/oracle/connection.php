@@ -17,9 +17,5 @@ $connection_string
 
 If (!$connection)
 echo 'Connection failed';
-else
-echo 'Connection succesfull';
 
-// Close connection
-//oci_close($connection);
 ?>
